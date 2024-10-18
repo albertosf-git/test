@@ -20,6 +20,7 @@
         </form>
         <div class="flex column">
             <h3>¿Ya tienes una cuenta?</h3>
+            <h3>test</h3>
             <a href="./inicioSesion.html">Crear cuenta</a>
         </div>
     </div>
