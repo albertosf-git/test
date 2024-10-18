@@ -1,0 +1,84 @@
+.flex {
+    display: flex;
+    align-items: var(--flex-align, center);
+    justify-content: var(--flex-justify, center);
+    gap: var(--flex-gap, 1rem);
+}
+
+.column {
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    gap: var(--grid-gap, 1rem)
+}
+
+.fill-max-size {
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-container {
+    grid-template-rows: min-content 1fr;
+}
+
+.player-container {
+    grid-template-rows: repeat(1fr, 3);
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-areas:
+    "one two four"
+    "one three four";
+}
+
+.margin {
+    margin-inline: auto;
+    width: min(80rem, calc(100% - 2rem));
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+}
+
+.card[data-color="grad-pink"] {
+    background-image: var(--gradient-pink);
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    background-image: var(--gradient-pink);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform ease-in-out 0.25s, opacity ease-in-out 0.25s;
+}
+
+.button:hover, button:active {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/*---------------Inicio de sesión y registrarse--------------- */
+.form {
+    width: min(40rem, calc(100% - 2rem));
+    height: min(80vh, calc(100vh - 4rem));
+}
+
+/*---------------Error--------------- */
+.error {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgb(0, 0, 0.75), rgba(0, 0, 0, .25));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.error div {
+    padding: 3rem
+}
